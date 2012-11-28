@@ -1,0 +1,2 @@
+module HatenaHelper
+end

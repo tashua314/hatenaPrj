@@ -16,7 +16,16 @@ log
   git commit -am 'merge repos'
   git push origin master
 
+●railsプロジェクトを動くように作成
+  bundle install
+  rails g controller search
+  rails destroy controller search
+  raifs g controller hatena
 
+  vim config/routes.rb
+  
+  
+ 
 ----------------
 next
 ----------------
