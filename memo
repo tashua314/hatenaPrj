@@ -1,18 +1,18 @@
 ----------------
 log
 ----------------
-œgit‚É“o˜^‚·‚érailsƒvƒƒWƒFƒNƒg‚ğì¬
+â—gitã«ç™»éŒ²ã™ã‚‹railsãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆ
   rails new hatenaPrj
   git init
   git add .
   git commit -m "make hatenaPrj"
-œƒvƒƒWƒFƒNƒg‚ğgithub‚Éƒ}[ƒWA“o˜^
+â—ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’githubã«ãƒãƒ¼ã‚¸ã€ç™»éŒ²
   remote add origin git@github.com:tashua314/hatenaPrj.git
   remote add upstream git@github.com:tashua314/hatenaPrj.git
-// upstream‚¢‚ç‚È‚¢‚©‚à
+// upstreamã„ã‚‰ãªã„ã‹ã‚‚
   fetch upstream
   merge upstream/master
-// ƒRƒ“ƒtƒŠƒNƒg‚ğè“®‚ÅC³
+// ã‚³ãƒ³ãƒ•ãƒªã‚¯ãƒˆã‚’æ‰‹å‹•ã§ä¿®æ­£
   git commit -am 'merge repos'
   git push origin master
 
