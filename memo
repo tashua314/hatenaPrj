@@ -1,0 +1,22 @@
+----------------
+log
+----------------
+●gitに登録するrailsプロジェクトを作成
+  rails new hatenaPrj
+  git init
+  git add .
+  git commit -m "make hatenaPrj"
+●プロジェクトをgithubにマージ、登録
+  remote add origin git@github.com:tashua314/hatenaPrj.git
+  remote add upstream git@github.com:tashua314/hatenaPrj.git
+// upstreamいらないかも
+  fetch upstream
+  merge upstream/master
+// コンフリクトを手動で修正
+  git commit -am 'merge repos'
+  git push origin master
+
+
+----------------
+next
+----------------
