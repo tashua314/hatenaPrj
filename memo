@@ -32,6 +32,10 @@ mkdir -p etc/package/vim-ruby-2012.11.29
 gem install etc/package/vim-ruby-2012.11.29.gem
 ruby bin/vim-ruby-install.rb
  
+●ルーティングまわり
+formタグにはアクション名いらない
+途中終了はreturn
+
  
 ----------------
 next
