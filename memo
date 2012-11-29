@@ -24,7 +24,14 @@ log
 
   vim config/routes.rb
   
-  
+●vim-rubyの入れ方
+git clone http://github.com/vim-ruby/vim-ruby.git
+git checkout vim7.3
+rake package
+mkdir -p etc/package/vim-ruby-2012.11.29
+gem install etc/package/vim-ruby-2012.11.29.gem
+ruby bin/vim-ruby-install.rb
+ 
  
 ----------------
 next
