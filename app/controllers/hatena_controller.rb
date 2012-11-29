@@ -1,9 +1,14 @@
 class HatenaController < ApplicationController
+
   def search
     require 'open-uri'
     require 'json'
     
     url = params[:url]
+
+    if url == nil
+      return
+    end
 
     html = open(url).read
     json = JSON.parser.new(html)

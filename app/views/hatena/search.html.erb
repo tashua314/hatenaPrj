@@ -7,13 +7,11 @@
 <meta name="description" content="">
 </head>
 <body>
-<% form_tag :action => '/hatena/search' do%>
+<% form_tag :action => 'search' do %>
   <p>入力してください。</p>
   <%= search_field :url %>>
   <%= submit_tag "submit" %>
 <% end %>
-
 </body>
 </html>
-
 
