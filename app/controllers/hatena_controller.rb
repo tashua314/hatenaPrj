@@ -3,7 +3,18 @@ class HatenaController < ApplicationController
     require 'open-uri'
     require 'json'
     
-    html = open
-    req
+    url = params[:url]
+
+    html = open(url).read
+    json = JSON.parser.new(html)
+    puts json.class
+
+    #parse()
+    hash = json.parse()
+    parsed = hash['related']
+
+    parsed.each do |link|
+      puts link['title']
+    end
   end
 end
