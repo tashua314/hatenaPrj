@@ -7,10 +7,11 @@
 <meta name="description" content="">
 </head>
 <body>
-<% form_tag :action => 'search' do %>
+<p>test</p>
+<%= form_tag('search') do %>
   <p>入力してください。</p>
-  <%= search_field :url %>>
-  <%= submit_tag "submit" %>
+  <%= search_field_tag(:url, value=nil, options={:size => 50}) %>
+  <%= submit_tag(value = "submit") %>
 <% end %>
 </body>
 </html>

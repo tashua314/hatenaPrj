@@ -6,7 +6,7 @@ class HatenaController < ApplicationController
     
     url = params[:url]
 
-    if url == nil
+    if url == nil || url == ""
       return
     end
 
