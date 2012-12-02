@@ -7,12 +7,34 @@
 <meta name="description" content="">
 </head>
 <body>
-<p>test</p>
-<%= form_tag('search') do %>
-  <p>入力してください。</p>
-  <%= search_field_tag(:url, value=nil, options={:size => 50}) %>
-  <%= submit_tag(value = "submit") %>
-<% end %>
+  <p>test</p>
+  <%= form_tag('search') do %>
+    <p>入力してください。</p>
+    <%= search_field_tag(:url, value=nil, options={:size => 50}) %>
+    <%= submit_tag(value = "submit") %>
+  <% end %>
+<%# @items %>
+  <div class='label'>タイトル：</div><div class='content'><%= @title %></div>
+  <div class='label'>entry_url：</div><div class='content'><%= @entry_url %></div>
+  <table>
+    <tr>
+      <th>ユーザー</th>
+      <th>タグ</th>
+      <th>コメント</th>
+      <th>タイムスタンプ</th>
+    </tr>
+<%# if @users.length != nil && @users.length != "" %>
+::<%= @users  %>
+  <% [1,2,3].each do |user| %>
+    <tr>
+      <td><%= user %></td>
+      <td><%# @tags[i] %></td>
+      <td><%# @comments[i] %></td>
+      <td><%# @timestamps[i] %></td>
+    </tr>
+  <% end %>
+<%# end %>
+  </table>
 </body>
 </html>
 
