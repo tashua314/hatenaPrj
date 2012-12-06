@@ -12,23 +12,27 @@ class HatenaController < ApplicationController
 
     html = open(url).read
     json = JSON.parser.new(html)
-    puts json.class
+
+    @users = html
+return
 
     #parse()
     hash = json.parse()
     parsed = hash['bookmarks']
     @title = hash['title']
     @entry_url = hash['entry_url']
+    
+    @timestamps = Array.new(parsed.length)
+    @comments = Array.new(parsed.length)
+    @users = Array.new(parsed.length)
+    @tags = Array.new(parsed.length)
 
-    #@users = Array.new(parsed.length)
-    @users = "testt"
+    parsed.each_with_index do |item, i|
+      @timestamps[i] = item['timestamp']
+      @comments[i] = item['comment']
+      @users[i] = item['user']
+      @tags[i] = item['tags']
+    end
 
-#    parsed.each_with_index do |item, i|
-#      @timestamps[i] = item['timestamp']
-#      @comments[i] = item['comment']
-#      @users[i] = item['user']
-     # @tags[i] = item['tags']
-#    end
-#@items = html
   end
 end

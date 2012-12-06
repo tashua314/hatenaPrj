@@ -23,16 +23,16 @@
       <th>コメント</th>
       <th>タイムスタンプ</th>
     </tr>
+<%# @users %>
 <%# if @users.length != nil && @users.length != "" %>
-::<%= @users  %>
-  <% [1,2,3].each do |user| %>
+  <% @users.each do |user| -%>
     <tr>
       <td><%= user %></td>
       <td><%# @tags[i] %></td>
       <td><%# @comments[i] %></td>
       <td><%# @timestamps[i] %></td>
     </tr>
-  <% end %>
+  <% end -%>
 <%# end %>
   </table>
 </body>
