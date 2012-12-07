@@ -4,17 +4,17 @@ class HatenaController < ApplicationController
     require 'open-uri'
     require 'json'
     
-    url = params[:url]
+    @url = params[:url]
 
-    if url == nil || url == ""
+    if @url.blank?
+      @url = ""
       return
     end
 
-    html = open(url).read
+    html = open(@url).read
     json = JSON.parser.new(html)
 
     @users = html
-return
 
     #parse()
     hash = json.parse()

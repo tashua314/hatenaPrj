@@ -7,10 +7,9 @@
 <meta name="description" content="">
 </head>
 <body>
-  <p>test</p>
   <%= form_tag('search') do %>
     <p>入力してください。</p>
-    <%= search_field_tag(:url, value=nil, options={:size => 50}) %>
+    <%= search_field_tag(:url, value=@url, options={:size => 150}) %>
     <%= submit_tag(value = "submit") %>
   <% end %>
 <%# @items %>
@@ -24,16 +23,16 @@
       <th>タイムスタンプ</th>
     </tr>
 <%# @users %>
-<%# if @users.length != nil && @users.length != "" %>
-  <% @users.each do |user| -%>
+<% if @users.present? %>
+  <% @users.each_with_index do |user, i| -%>
     <tr>
       <td><%= user %></td>
-      <td><%# @tags[i] %></td>
-      <td><%# @comments[i] %></td>
-      <td><%# @timestamps[i] %></td>
+      <td><%= @tags[i] %></td>
+      <td><%= @comments[i] %></td>
+      <td><%= @timestamps[i] %></td>
     </tr>
   <% end -%>
-<%# end %>
+<% end %>
   </table>
 </body>
 </html>
