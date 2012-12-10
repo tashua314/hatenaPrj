@@ -20,8 +20,10 @@ test:
 
 production:
   adapter: postgresql
-  database: hatena-p
-  password: hatena-p
-  host: 
+  database: dhmpaqt7ef4ik
+  user: kbyvspwjajpldx
+  password: RjWoZTr7e8-PEn2Q8DySPcfVMC
+  host: ec2-54-243-241-130.compute-1.amazonaws.com
+  port: 5432
   pool: 5
   timeout: 5000
