@@ -2,7 +2,8 @@ HatenaPrj::Application.routes.draw do
 
   #resources :hatena
   match 'search' => 'hatena#search'
-
+  root :to => 'hatena#search'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
