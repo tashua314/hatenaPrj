@@ -12,7 +12,7 @@
     <%= search_field_tag(:url, value=@url, options={:size => 150}) %>
     <%= submit_tag(value = "submit") %>
   <% end %>
-<%# @items %>
+<%= @alert %>
   <div class='label'>タイトル：</div><div class='content'><%= @title %></div>
   <div class='label'>entry_url：</div><div class='content'><%= @entry_url %></div>
   <table>
@@ -22,7 +22,6 @@
       <th>コメント</th>
       <th>タイムスタンプ</th>
     </tr>
-<%# @users %>
 <% if @users.present? %>
   <% @users.each_with_index do |user, i| -%>
     <tr>
@@ -31,7 +30,7 @@
       <td><%= @comments[i] %></td>
       <td><%= @timestamps[i] %></td>
     </tr>
-  <% end -%>
+  <% end %>
 <% end %>
   </table>
 </body>
