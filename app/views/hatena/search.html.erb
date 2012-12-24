@@ -8,7 +8,7 @@
 </head>
 <body>
   <%= form_tag('search') do %>
-    <p>入力してください。</p>
+    <p>URLを入力してください。\nはてブのコメントが表示されます。</p>
     <%= search_field_tag(:url, value=@url, options={:size => 150}) %>
     <%= submit_tag(value = "submit") %>
   <% end %>
