@@ -13,8 +13,9 @@
     <%= submit_tag(value = "submit") %>
   <% end %>
 <%= @alert %>
+<% if @users.length > 1 %>
   <div class='label'>タイトル：</div><div class='content'><%= @title %></div>
-  <div class='label'>entry_url：</div><div class='content'><%= @entry_url %></div>
+  <div class='label'>entry_url：</div><div class='content'><%= link_to(@entry_url, @entry_url) %></div>
   <table>
     <tr>
       <th>ユーザー</th>
@@ -22,7 +23,6 @@
       <th>コメント</th>
       <th>タイムスタンプ</th>
     </tr>
-<% if @users.present? %>
   <% @users.each_with_index do |user, i| -%>
     <tr>
       <td><%= user %></td>
@@ -31,8 +31,8 @@
       <td><%= @timestamps[i] %></td>
     </tr>
   <% end %>
-<% end %>
   </table>
+<% end %>
 </body>
 </html>
 
