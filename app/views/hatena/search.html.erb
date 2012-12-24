@@ -7,17 +7,21 @@
 <meta name="description" content="">
 </head>
 <body>
-  <%= form_tag('search') do %>
-    <p>URLを入力してください。\nはてブのコメントが表示されます。</p>
-    <%= search_field_tag(:url, value=@url, options={:size => 150}) %>
-    <%= submit_tag(value = "submit") %>
-  <% end %>
-<%= @alert %>
+<%= form_tag('search') do %>
+  <p>URLを入力してください。</p>
+  <p>その記事のブックマーク情報が表示されます。</p>
+  <%= search_field_tag(:url, value=@url, options={:size => 150}) %>
+  <%= submit_tag(value = "submit") %>
+<% end %>
+  <br />
+  <%= @alert %>
 <% if @users.length > 1 %>
-  <div class='label'>タイトル：</div><div class='content'><%= @title %></div>
-  <div class='label'>entry_url：</div><div class='content'><%= link_to(@entry_url, @entry_url) %></div>
+  <div><span class='label'>タイトル：</span><span class='content'><%= @title %></span></div>
+  <div><span class='label'>entry_url：</span><span class='content'><%= link_to(@entry_url, @entry_url) %></span></div>
+  <div><span class='label'>ブックマークした人：</span><span class='content'><%= @users.length %>人</span></div>
   <table>
     <tr>
+      <th>No.</th>
       <th>ユーザー</th>
       <th>タグ</th>
       <th>コメント</th>
@@ -25,6 +29,7 @@
     </tr>
   <% @users.each_with_index do |user, i| -%>
     <tr>
+      <td><%= i+1 %></td>
       <td><%= user %></td>
       <td><%= @tags[i] %></td>
       <td><%= @comments[i] %></td>
