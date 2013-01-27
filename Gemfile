@@ -13,7 +13,6 @@ end
 group :production do
   gem 'pg'
   gem 'therubyracer-heroku'
-  gem 'activerecord-postgresql-adapter'
 end
 
 # Gems used only for assets and not required
