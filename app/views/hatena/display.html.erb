@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>スクレイピング</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+</head>
+<body>
+  <table>
+    <tr>
+      <th>No.</th>
+      <th>title</th>
+      <th>summary</th>
+      <th>url</th>
+      <th>タイムスタンプ</th>
+    </tr>
+  <% @scraps.each_with_index do |scrap, i| -%>
+    <tr>
+      <td><%= scrap.id %></td>
+      <td><%= scrap.entry_title %></td>
+      <td><%= scrap.entry_summary %></td>
+      <td><%= scrap.url %></td>
+      <td><%= scrap.create_date %></td>
+    </tr>
+  <% end %>
+  </table>
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  entry-title: MyString
+  url: MyString
+  entry-summary: MyString
+  update-date: 2013-01-27 09:31:43
+  create-date: 2013-01-27 09:31:43
+
+two:
+  id: 1
+  entry-title: MyString
+  url: MyString
+  entry-summary: MyString
+  update-date: 2013-01-27 09:31:43
+  create-date: 2013-01-27 09:31:43

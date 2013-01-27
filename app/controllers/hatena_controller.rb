@@ -48,4 +48,9 @@ class HatenaController < ApplicationController
       @tags[i] = item['tags']
     end
   end
+
+
+  def display
+    @scraps = Scrap.all
+  end
 end
