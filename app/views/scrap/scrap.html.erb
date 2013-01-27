@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>スクレイピングtest</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+</head>
+<body>
+  <p>test</p>
+  <br />
+  <p><%= @output %></p>
+  <br />
+  <% @json.each do |item| %>
+    <p><%= item %></p>
+  <% end %>
+</body>
+</html>
+

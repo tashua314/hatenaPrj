@@ -3,6 +3,7 @@ HatenaPrj::Application.routes.draw do
   #resources :hatena
   match 'search' => 'hatena#search'
   match 'display' => 'hatena#display'
+  match 'scrap' => 'scrap#scrap'
   root :to => 'hatena#search'
   
   # The priority is based upon order of creation:
