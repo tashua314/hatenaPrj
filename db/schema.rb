@@ -24,8 +24,6 @@ ActiveRecord::Schema.define(:version => 20130127093143) do
     t.string   "entry_title"
     t.string   "url"
     t.string   "entry_summary"
-    t.datetime "update_date"
-    t.datetime "create_date"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
