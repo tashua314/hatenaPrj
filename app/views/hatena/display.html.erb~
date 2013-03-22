@@ -12,6 +12,7 @@
       <th>No.</th>
       <th>title</th>
       <th>summary</th>
+      <th>url</th>
       <th>タイムスタンプ</th>
     </tr>
   <% @scraps.each_with_index do |scrap, i| -%>
